@@ -17,7 +17,9 @@ export default {
           "dark-blue":"#0A0A2B"
       },
       backgroundImage:{
-        "hero-bg":"url('/assets/images/hero-bg.webp')"
+        "hero-bg":"url('/assets/images/hero-bg.webp')",
+         "hero-tab-bg":"url('/assets/images/hero-tab-bg.webp')",
+          "hero-mobile-bg":"url('/assets/images/hero-mobile-bg.webp')"
       },
       lineHeight:{
         "custom-md":"120%",
