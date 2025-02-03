@@ -11,7 +11,18 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "light-purple":"#952FFE",
+         "light-pink":"#C641C6",
+          "light-orange":"#FF676B",
+          "dark-blue":"#0A0A2B"
       },
+      backgroundImage:{
+        "hero-bg":"url('/assets/images/hero-bg.webp')"
+      },
+      lineHeight:{
+        "custom-md":"120%",
+        "custom-xl":"150%"
+      }
     },
   },
   plugins: [],
