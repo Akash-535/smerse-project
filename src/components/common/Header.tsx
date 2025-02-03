@@ -2,22 +2,50 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { HEADER_LIST } from "@/utils/helper";
 import Logo from "../../../public/assets/images/logo.webp";
+import { HEADER_LIST } from "@/utils/Helper";
+
 const Header = () => {
   const [showSlide, setShowSlide] = useState(false);
 
   const toggleSidebar = () => setShowSlide(!showSlide);
-  const closeNavbar = () => {
-    setShowSlide(false);
-  };
+  const closeNavbar = () => setShowSlide(false);
 
   useEffect(() => {
     document.body.style.overflow = showSlide ? "hidden" : "auto";
   }, [showSlide]);
 
+  // Scroll Effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.getElementById("header");
+      if (!header) return;
+      console.log("Scroll Y:", window.scrollY);
+
+      if (window.scrollY > 100) {
+        header.classList.add("bg-opacity-100");
+        header.classList.remove("bg-opacity-50");
+        header.classList.add("!bg-black");
+      } else {
+        header.classList.remove("bg-opacity-100");
+        header.classList.add("bg-opacity-50");
+        header.classList.remove("!bg-black");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      console.log("Removing scroll listener");
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="overflow-hidden mx-auto px-4 pt-1.5 bg-dark-blue bg-opacity-50 pb-4 max-md:py-[5px]">
+    <div
+      id="header"
+      className="overflow-hidden mx-auto px-4 pt-1.5 bg-dark-blue pb-4 max-md:py-[5px] fixed left-0 top-0 w-full z-[11] bg-opacity-50 transition-all duration-300 ease-in-out"
+    >
       <div className="container mx-auto flex justify-between items-center">
         <Link href="#">
           <Image
@@ -51,9 +79,11 @@ const Header = () => {
             Mint Now
           </button>
         </div>
+
         <button className="max-lg:hidden p-[11px_23px] bg-gradient-to-t to-light-purple via-light-pink from-light-orange text-white text-xl font-extrabold tracking-[2px] leading-6 rounded-lg hover:bg-gradient-to-b">
           Mint Now
         </button>
+
         <div
           onClick={toggleSidebar}
           className="z-[21] flex-col gap-1 lg:hidden flex cursor-pointer"
