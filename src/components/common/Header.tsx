@@ -36,7 +36,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      console.log("Removing scroll listener");
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
