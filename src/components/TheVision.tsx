@@ -18,7 +18,7 @@ const TheVision = () => {
             <div className="bg-gradient-to-t from-light-purple via-light-pink to-light-orange p-[1px] rounded-lg group">
               <div
                 key={i}
-                className="relative h-full max-w-[367px] min-h-[365px] bg-purple-gray px-7 rounded-lg pt-[90px] pb-8 group-hover:bg-transparent transition-all duration-300 ease-linear"
+                className="relative h-full max-w-[367px] min-h-[365px] bg-purple-gray px-[27px] rounded-lg pt-[90px] pb-8 group-hover:bg-transparent transition-all duration-300 ease-linear"
               >
                 <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 rounded-full w-fit bg-gradient-to-b from-light-purple via-light-pink to-light-orange p-[1px] flex items-center justify-center">
                   <div className="bg-purple-gray rounded-full size-24 flex items-center justify-center group-hover:bg-transparent transition-all duration-300 ease-linear">
@@ -27,8 +27,14 @@ const TheVision = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-center text-white leading-[168%]">
-                  {item.discription}
+                <p className="text-center text-white leading-[168%] tracking-[2px] text-base">
+                  {item.description}
+                </p>
+                <p className="text-center text-white leading-[168%] tracking-[2px] text-base">
+                  {item.descriptioTwo}
+                </p>
+                <p className="text-center text-white leading-[168%] tracking-[2px] text-base">
+                  {item.descriptioThree}
                 </p>
               </div>
             </div>

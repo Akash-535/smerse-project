@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="bg-hero-bg bg-cover bg-center bg-no-repeat max-lg:bg-hero-tab-bg max-md:bg-hero-mobile-bg">
       <Header />
-      <div className="pt-[52px] pb-[50px] flex justify-center items-center flex-col px-3.5 max-lg:pb-[105px] max-lg:pt-[79px] max-md:pt-[113px] max-md:pb-[85px]">
+      <div className="pt-[152px] pb-[50px] flex justify-center items-center flex-col px-3.5 max-lg:pb-[105px] max-lg:pt-[179px] max-md:pt-[163px] max-md:pb-[85px]">
         <Image
           className="max-lg:w-[388px] max-md:w-[256px]"
           width={404}
