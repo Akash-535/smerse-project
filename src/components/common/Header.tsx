@@ -20,8 +20,6 @@ const Header = () => {
     const handleScroll = () => {
       const header = document.getElementById("header");
       if (!header) return;
-      console.log("Scroll Y:", window.scrollY);
-
       if (window.scrollY > 100) {
         header.classList.add("bg-opacity-100");
         header.classList.remove("bg-opacity-50");
