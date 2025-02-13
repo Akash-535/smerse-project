@@ -41,12 +41,12 @@ const Header = () => {
   return (
     <div
       id="header"
-      className="overflow-hidden mx-auto px-4 pt-1.5 bg-dark-blue pb-4 max-md:py-[5px] fixed left-0 top-0 w-full z-[11] bg-opacity-50 transition-all duration-300 ease-in-out"
+      className="overflow-hidden mx-auto px-4 py-4 max-lg:py-3 bg-dark-blue max-md:py-[5px] fixed left-0 top-0 w-full z-[11] bg-opacity-50 transition-all duration-300 ease-in-out"
     >
       <div className="container mx-auto flex justify-between items-center">
         <Link href="#">
           <Image
-            className="max-lg:size-[76px] max-md:size-[40px]"
+            className="max-lg:size-[76px] max-md:size-[40px] pointer-events-none"
             src={Logo}
             alt="logo"
             width={68}
@@ -63,49 +63,52 @@ const Header = () => {
             <ul key={i}>
               <li className="flex gap-1 flex-row justify-center items-center relative after:absolute after:w-0 after:transition-all after:duration-300 after:hover:w-full after:bottom-0 after:h-0.5 after:bg-white">
                 <Link
-                  href=""
+                  href={obj.link}
                   onClick={closeNavbar}
                   className="text-base font-semibold text-white"
                 >
-                  {obj}
+                  {obj.title}
                 </Link>
               </li>
             </ul>
           ))}
-          <button className="lg:hidden p-[11px_23px] bg-gradient-to-t to-light-purple via-light-pink from-light-orange text-white text-xl font-extrabold tracking-[2px] leading-6 rounded-lg hover:bg-gradient-to-b">
+          <button
+            onClick={closeNavbar}
+            className="md:hidden p-[11px_23px] bg-gradient-to-t to-light-purple via-light-pink from-light-orange text-white text-xl font-extrabold tracking-[2px] leading-6 rounded-lg hover:bg-gradient-to-b"
+          >
             Mint Now
           </button>
         </div>
-
-        <button className="max-lg:hidden p-[11px_23px] bg-gradient-to-t to-light-purple via-light-pink from-light-orange text-white text-xl font-extrabold tracking-[2px] leading-6 rounded-lg hover:bg-gradient-to-b">
-          Mint Now
-        </button>
-
-        <div
-          onClick={toggleSidebar}
-          className="z-[21] flex-col gap-1 lg:hidden flex cursor-pointer"
-        >
-          <span
-            className={`${
-              showSlide
-                ? "w-7 h-1 bg-white rotate-45 translate-y-3 duration-300 ease-linear rounded"
-                : "w-7 h-1 bg-white duration-300 ease-linear rounded"
-            }`}
-          ></span>
-          <span
-            className={`${
-              showSlide
-                ? "w-7 h-1 bg-white translate-x-10 opacity-0 duration-300 ease-linear"
-                : "w-7 h-1 bg-white duration-700 ease-linear rounded"
-            }`}
-          ></span>
-          <span
-            className={`${
-              showSlide
-                ? "w-7 h-1 bg-white -rotate-45 -translate-y-1 duration-300 ease-linear rounded"
-                : "w-7 h-1 bg-white duration-300 ease-linear rounded"
-            }`}
-          ></span>
+        <div className="flex items-center gap-10">
+          <button className="max-md:hidden p-[11px_23px] bg-gradient-to-t to-light-purple via-light-pink from-light-orange text-white text-xl font-extrabold tracking-[2px] leading-6 rounded-lg hover:bg-gradient-to-b">
+            Mint Now
+          </button>
+          <div
+            onClick={toggleSidebar}
+            className="z-[21] flex-col gap-1 lg:hidden flex cursor-pointer"
+          >
+            <span
+              className={`${
+                showSlide
+                  ? "w-7 h-1 bg-white rotate-45 translate-y-3 duration-300 ease-linear rounded"
+                  : "w-7 h-1 bg-white duration-300 ease-linear rounded"
+              }`}
+            ></span>
+            <span
+              className={`${
+                showSlide
+                  ? "w-7 h-1 bg-white translate-x-10 opacity-0 duration-300 ease-linear"
+                  : "w-7 h-1 bg-white duration-700 ease-linear rounded"
+              }`}
+            ></span>
+            <span
+              className={`${
+                showSlide
+                  ? "w-7 h-1 bg-white -rotate-45 -translate-y-1 duration-300 ease-linear rounded"
+                  : "w-7 h-1 bg-white duration-300 ease-linear rounded"
+              }`}
+            ></span>
+          </div>
         </div>
       </div>
     </div>

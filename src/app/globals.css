@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Lato", serif;
   background: #0a0a2b;

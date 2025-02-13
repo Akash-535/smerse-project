@@ -9,15 +9,42 @@ import {
 } from "@/utils/Icons";
 
 export const HEADER_LIST = [
-  "Home",
-  "Project",
-  "Vision",
-  "Game-Fi",
-  "Sport2Earn",
-  "Mint RoadMap",
-  "Utility",
-  "Team",
-  "FAQs",
+  {
+    title: "Home",
+    link: "#",
+  },
+  {
+    title: "Project",
+    link: "#project",
+  },
+  {
+    title: "Vision",
+    link: "#vision",
+  },
+  {
+    title: "Game-Fi",
+    link: "#",
+  },
+  {
+    title: "Sport2Earn",
+    link: "#",
+  },
+  {
+    title: "Mint RoadMap",
+    link: "#",
+  },
+  {
+    title: "Utility",
+    link: "#",
+  },
+  {
+    title: "Team",
+    link: "#",
+  },
+  {
+    title: "Team",
+    link: "#",
+  },
 ];
 
 export const ABOUT_US_LIST = [

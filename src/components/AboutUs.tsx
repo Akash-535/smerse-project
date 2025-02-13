@@ -13,36 +13,38 @@ const AboutUs = () => {
             headingSpan="About Us"
             mySpanClass="max-md:translate-x-[2px] max-md:-top-[2%] translate-x-[2px]"
           />
-          <div className="pt-7 max-xl:pt-5 max-md:pt-8">
+          <div className="pt-7 max-xl:pt-5 max-md:pt-8 flex flex-col gap-2">
             {ABOUT_US_LIST.map((obj, i) => (
               <div
                 key={i}
-                className="flex gap-5 pt-2 max-xl:pt-3 max-xl:items-center"
+                className="flex gap-5 max-xl:pt-3 max-xl:items-center"
               >
                 <div className="size-[29px] min-w-[29px] mt-0.5 flex items-center justify-center rounded-full bg-gradient-to-b from-light-purple via-light-pink to-light-orange">
                   {obj.icon}
                 </div>
-                <p className="text-white tracking-[1.5px] text-base leading-custom-xl max-w-[560px] font-normal max-xl:max-w-3xl">
+                <p className="text-white tracking-[1.5px] text-base leading-custom-xl max-w-[560px] font-normal max-lg:max-w-3xl">
                   {obj.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-        <Image
-          src={aboutUsImg}
-          alt="about"
-          width={954}
-          height={690}
-          className="pointer-events-none max-lg:mx-auto lg:hidden"
-        />
+        <div className="max-sm:pt-4 justify-center flex w-full">
+          <Image
+            src={aboutUsImg}
+            alt="about"
+            width={954}
+            height={690}
+            className="pointer-events-none max-lg:mx-auto lg:hidden max-md:min-w-[600px] max-md:max-w-[654px] max-w-[950px] md:min-w-[943px] mx-auto w-full max-lg:-translate-x-10"
+          />
+        </div>
       </div>
       <Image
         src={aboutUsImg}
         alt="about"
         width={954}
         height={690}
-        className="pointer-events-none max-lg:mx-auto max-lg:hidden absolute top-11 right-0 max-lg:-left-40 max-xl:-right-32 max-lg:top-[412px]"
+        className="pointer-events-none max-xl:w-[700px] max-xl:top-[18%] max-lg:mx-auto max-lg:hidden absolute top-11 right-0 max-lg:-left-40 max-xl:-right-24 max-lg:top-[412px]"
       />
     </div>
   );
