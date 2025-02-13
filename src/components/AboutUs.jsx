@@ -1,58 +1,45 @@
 import React from "react";
 import Image from "next/image";
 import aboutUsImg from "../../public/assets/images/about-us-img.webp";
-import aboutBlueLayer from "../../public/assets/images/about-blue-layer.webp";
-import aboutRedLayer from "../../public/assets/images/about-red-layer.webp";
 import { ABOUT_US_LIST } from "@/utils/Helper";
+import Heading from "./common/Heading";
 const AboutUs = () => {
   return (
-    <div className="flex container mx-auto pt-36 pb-[78px] max-xl:pt-24 max-md:pt-[60px] justify-between items-center relative max-xl:flex-col max-xl:px-8 max-xl:justify-center max-xl:items-center max-md:px-4 ">
-      <div>
-        <div className="relative">
-          <h2 className="pt-8 text-5xl font-black text-white tracking-[3px] relative z-10 leading-custom-md max-md:text-[40px]">
-            About Us
-          </h2>
-          <span className="absolute inset-0 text-5xl max-md:text-[40px] leading-custom-md font-black bg-gradient-to-t to-light-purple via-light-pink from-light-orange bg-clip-text text-transparent tracking-[3px] top-[33.5%] -translate-x-[1.5px] max-md:top-[38%]">
-            About Us
-          </span>
-        </div>
-        <div className="pt-7 max-xl:pt-5 max-md:pt-8">
-          {ABOUT_US_LIST.map((obj, i) => (
-            <div
-              key={i}
-              className="flex gap-5 pt-2 max-xl:pt-3 max-xl:items-center"
-            >
-              <div className="size-[29px] min-w-[29px] mt-0.5 flex items-center justify-center rounded-full bg-gradient-to-b from-light-purple via-light-pink to-light-orange">
-                {obj.icon}
+    <div className="relative max-w-[1920px] mx-auto overflow-hidden">
+      <div className="container mx-auto md:px-8 lg:px-4 flex items-center justify-between pt-[189px] max-lg:pt-24 max-sm:pt-[60px] max-lg:pb-[214px] pb-[272px] max-sm:pb-[93px] gap-10 max-lg:gap-[132px] max-sm:gap-20 max-lg:flex-wrap">
+        <div className="relative z-10 max-lg:px-4">
+          <Heading text="About Us" headingSpan="About Us" />
+          <div className="pt-7 max-xl:pt-5 max-md:pt-8">
+            {ABOUT_US_LIST.map((obj, i) => (
+              <div
+                key={i}
+                className="flex gap-5 pt-2 max-xl:pt-3 max-xl:items-center"
+              >
+                <div className="size-[29px] min-w-[29px] mt-0.5 flex items-center justify-center rounded-full bg-gradient-to-b from-light-purple via-light-pink to-light-orange">
+                  {obj.icon}
+                </div>
+                <p className="text-white tracking-[1.5px] text-base leading-custom-xl max-w-[560px] font-normal max-xl:max-w-3xl">
+                  {obj.description}
+                </p>
               </div>
-              <p className="text-white tracking-[1.5px] text-base leading-custom-xl max-w-[560px] font-normal max-xl:max-w-3xl">
-                {obj.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        <Image
+          src={aboutUsImg}
+          alt="about"
+          width={954}
+          height={690}
+          className="pointer-events-none max-lg:mx-auto lg:hidden"
+        />
       </div>
       <Image
-        width={478.06}
-        height={478.31}
-        className="max-xl:pt-24 max-md:w-[300px] max-md:h-full object-cover max-md:pt-16"
         src={aboutUsImg}
-        alt="about image"
+        alt="about"
+        width={954}
+        height={690}
+        className="pointer-events-none max-lg:mx-auto max-lg:hidden absolute top-11 right-0 max-lg:-left-40 max-xl:-right-32 max-lg:top-[412px]"
       />
-      {/* <Image
-        width={324}
-        height={347}
-        className=" bg-blend-screen absolute top-1/4 -z-[1] right-1/4"
-        src={aboutBlueLayer}
-        alt="layer"
-      />
-      <Image
-        width={324}
-        height={347}
-        className="bg-blend-screen absolute top-0 -z-[1] right-0"
-        src={aboutRedLayer}
-        alt="layer"
-      /> */}
     </div>
   );
 };
