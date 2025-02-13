@@ -6,9 +6,13 @@ import Heading from "./common/Heading";
 const AboutUs = () => {
   return (
     <div className="relative max-w-[1920px] mx-auto overflow-hidden">
-      <div className="container mx-auto md:px-8 lg:px-4 flex items-center justify-between pt-[189px] max-lg:pt-24 max-sm:pt-[60px] max-lg:pb-[214px] pb-[272px] max-sm:pb-[93px] gap-10 max-lg:gap-[132px] max-sm:gap-20 max-lg:flex-wrap">
-        <div className="relative z-10 max-lg:px-4">
-          <Heading text="About Us" headingSpan="About Us" />
+      <div className="container mx-auto lg:px-4 flex items-center justify-between pt-[189px] max-lg:pt-24 max-sm:pt-[60px] max-lg:pb-[99px] pb-[272px] max-sm:pb-[19px] gap-10 max-lg:gap-8 max-sm:gap-5 max-lg:flex-wrap">
+        <div className="relative z-10 max-lg:px-4 md:px-8">
+          <Heading
+            text="About Us"
+            headingSpan="About Us"
+            mySpanClass="max-md:translate-x-[2px] max-md:-top-[2%] translate-x-[2px]"
+          />
           <div className="pt-7 max-xl:pt-5 max-md:pt-8">
             {ABOUT_US_LIST.map((obj, i) => (
               <div

@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
 import TheVision from "@/components/TheVision";
 import Project from "@/components/Project";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   return (
